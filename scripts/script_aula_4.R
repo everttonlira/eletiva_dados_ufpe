@@ -73,4 +73,5 @@ microbenchmark(a <- saveRDS(sinistrosRecifeRaw, "bases_tratadas/sinistrosRecife.
 microbenchmark(a <- readRDS('bases_tratadas/sinistrosRecife.rds'), b <- read.csv2('bases_tratadas/sinistrosRecife.csv2', sep = ';'), times = 10L)
 
 # Para carregamento, o formato RDS carregou 3 vezes mais rápudo que o CSV2.
-# Para leitura, o formato RDS obteve um tempo quase 9 vezes menor que o formato CSV2.
+# Para leitura, o formato RDS obteve um tempo quase 9 vezes menor que o formato
+# CSV2. 

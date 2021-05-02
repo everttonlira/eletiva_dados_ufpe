@@ -59,10 +59,13 @@ for (itm in ls()) {
 # Adicionando formato de exportação
 write.csv2(sinistrosRecifeRaw, 'bases_tratadas/sinistrosRecife.csv2')
 saveRDS(sinistrosRecifeRaw, 'bases_tratadas/sinistrosRecife.rds')
+xlsx::write.xlsx(sinistrosRecifeRaw, file="sinistrosRecife.xlsx", 
+                 sheetName="Sinistros Recife")
 
 # Adicionando formato de leitura
 sinistrosRecife <- read.csv2('bases_tratadas/sinistrosRecife.csv2', sep = ';')
 sinistrosRecife <- readRDS('bases_tratadas/sinistrosRecife.rds')
+
 
 # Comparando
 install.packages("microbenchmark")
